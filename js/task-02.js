@@ -10,12 +10,13 @@ const ingredients = [
 function createItemForList(array, idList) {
     const list = document.querySelector(idList);
 
-    return array.map((item) => {
+    const arrayElements = array.map((item) => {
         const createElement = document.createElement("li");
         createElement.textContent = item;
         createElement.classList.add("item");
-        list.append(createElement);
+        return createElement;
     });
+    list.append(...arrayElements);
 }
 
 createItemForList(ingredients, "#ingredients");
