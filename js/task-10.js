@@ -11,6 +11,7 @@ const container = document.querySelector("#boxes");
 let sizeBox = 30;
 
 function createBoxes(amount) {
+    destroyBoxes();
     amount = Number(boxControls.firstElementChild.value);
     const arrayOfBox = [];
     if (amount > 0 && amount <= 100) {
